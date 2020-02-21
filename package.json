@@ -1,0 +1,26 @@
+{
+  "name": "make-a-game-josephmotherepic",
+  "version": "1.0.0",
+  "description": "A tile-based platformer using Phaser and Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTECH-IT/make-a-game-JosephMotherEpic.git"
+  },
+  "author": "Joey Lindsay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CTECH-IT/make-a-game-JosephMotherEpic/issues"
+  },
+  "homepage": "https://github.com/CTECH-IT/make-a-game-JosephMotherEpic#readme",
+  "devDependencies": {
+    "electron": "^8.0.1",
+    "phaser": "^3.22.0"
+  },
+  "dependencies": {
+    "electron-json-storage": "^4.1.8"
+  }
+}

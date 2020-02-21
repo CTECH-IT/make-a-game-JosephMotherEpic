@@ -1,1 +1,5 @@
-/* Put your CSS here */
+* {
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
