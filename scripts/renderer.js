@@ -1,20 +1,15 @@
-const dataManager = require('./JSONhandler');
-const dataHandler = new dataManager();
-let x = dataHandler.videoSettings(false,{});
+const dataHandler = require(__dirname + '/JSONhandler');
+let settings = dataHandler.videoSettings(false,{});
 dataHandler.createSaveFile();
+console.log(settings.height);
+console.log(dataHandler.SaveGame({},true));
 let gameProgress = dataHandler.SaveGame({},true);
+
 let config = {//phaser configuration
     type: Phaser.AUTO,
-    width: x.width,
-    height: x.height,
+    width: settings.width,
+    height: settings.height,
     scene: {
-        physics:{
-            default: 'arcade',
-            arcade: {
-                gravity: {y: 300},
-                debug: false
-            }
-        },
         preload: preload,
         create: create,
         update: update        
@@ -22,6 +17,7 @@ let config = {//phaser configuration
 };
     
 let game = new Phaser.Game(config);
+
 function preload(){
     
 }

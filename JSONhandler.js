@@ -270,32 +270,27 @@ const savegames = [{//stores all of the player's variables that define progress 
         }
     }
 }];
-class jsonH {
-    videoSettings(set, data){// function sets or reads videosettings.json depending on if set is true or false.
-        
-    }
-}
 module.exports = {
-    createSaveFile: () =>{
+    createSaveFile: () => {
         storage.setDataPath(defaultsavepath);
-        storage.has('savefile', (error,exists)=>{
+        storage.has('savefile', (error,exists)=> {
             if(error) throw error;
-            if(exists){
+            if(exists) {
                 console.log(exists);
-            }else if(!exists){
+            } else if(!exists) {
                 storage.setDataPath(defaultsavepath);
-                storage.set('savefile', savegames, (err) =>{
+                storage.set('savefile', savegames, (err) => {
                     if(err) throw err;
                 });
             }
         });
     },
-    SaveGame: (data, recieve) =>{
+    SaveGame: (data, recieve) => {
         let output = {};
         storage.setDataPath(defaultsavepath);
         switch(recieve){
             case false:
-                storage.set('savefile', data, (err)=>{
+                storage.set('savefile', data, (err) => {
                     if(err) throw err;
                     console.log(data);
                 });
