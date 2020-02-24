@@ -2,7 +2,7 @@ const dataHandler = require(__dirname + '/JSONhandler');
 let settings = dataHandler.videoSettings(false,{});
 dataHandler.createSaveFile();
 console.log(settings.height);
-console.log(dataHandler.SaveGame({},true));
+console.log(dataHandler.SaveGame(0,true));
 let gameProgress = dataHandler.SaveGame({},true);
 
 let config = {//phaser configuration

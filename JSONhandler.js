@@ -271,7 +271,7 @@ const savegames = [{//stores all of the player's variables that define progress 
     }
 }];
 module.exports = {
-    createSaveFile: () => {
+    createSaveFile: function() {
         storage.setDataPath(defaultsavepath);
         storage.has('savefile', (error,exists)=> {
             if(error) throw error;
@@ -285,7 +285,7 @@ module.exports = {
             }
         });
     },
-    SaveGame: (data, recieve) => {
+    SaveGame: function(data, recieve) {
         let output = {};
         storage.setDataPath(defaultsavepath);
         switch(recieve){
@@ -304,14 +304,14 @@ module.exports = {
         }
         return output;
     },
-    videoSettings: (set, data) => {
+    videoSettings:function(set, data) {
         let v = {};
         storage.setDataPath(defaultsettingspath);
         switch(set){
             case false:
-                storage.get('videosettings',(error, dat)=>{
+                storage.get('videosettings',(error, data)=>{
                     if(error) throw error;
-                    v = dat;
+                    v = data;
                     console.log(v);
                 });
                 break;
