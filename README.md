@@ -1,7 +1,8 @@
-This is a repository you can use to start your HTML/CSS/JavaScript project.
+# JSTetris
+This is a work-in-progress game that Uses Phaser and Electron as it is intended to run like a desktop application.
 
-I have included: index.html, styles.css, main.js, and bs.bat - the batch file that will start browser-sync automatically
+This game has only been tested on a Linux-based OS (Pop!_OS) so I don't know how well it'll work on Windows.
 
-There is also a .gitignore which will cause GitHub to ignore a bunch of files that shouldn't be stored (like temp files, log files, node libraries, etc)
+To start the game, make sure you have nodejs and npm installed.
 
-Make sure you edit index.html first and add your name in the author meta field. Then commit and push to make sure it's working for you.
+Once you have node and npm installed, clone this repository and run `npm start` in the terminal.

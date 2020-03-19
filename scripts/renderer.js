@@ -1,11 +1,42 @@
-const dataHandler = require(__dirname + '/JSONhandler');
-let settings = dataHandler.videoSettings(false,{});
-dataHandler.createSaveFile();
-console.log(settings.height);
-console.log(dataHandler.SaveGame(0,true));
-let gameProgress = dataHandler.SaveGame({},true);
+const storage = require('electron-json-storage');
+const dataPath = storage.getDefaultDataPath();
+let defaultSave = {
+    highscore: 0,
+    currentGame: {
+        columns: 0, 
+        row:[{blockid:0},{blockid:0},{blockid:0},{blockid:0},{blockid:0},{blockid:0},{blockid:0},{blockid:0},{blockid:0}]
+    }
+};
+function makeCells(){
+    
+}
 
-let config = {//phaser configuration
+function dataReturner(mode){
+    storage.setDataPath(dataPath);
+    let data = {};
+    switch(mode){
+        case 'video':
+            storage.get('videosettings', (error, dat)=>{
+                if(error) throw error;
+                data = dat;
+            });
+            console.log(data);
+            return data;
+    }
+}
+function dataSaver(data, mode){
+    storage.setDataPath(dataPath);
+    switch(mode){
+        case 'video': 
+        
+    }
+}
+let gameRows = {
+    width: 10,
+    height: 20
+};
+let settings = dataReturner('video');
+let config = { //phaser configuration
     type: Phaser.AUTO,
     width: settings.width,
     height: settings.height,
