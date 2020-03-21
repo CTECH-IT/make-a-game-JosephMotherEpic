@@ -5,4 +5,5 @@ This game has only been tested on a Linux-based OS (Pop!_OS) so I don't know how
 
 To start the game, make sure you have nodejs and npm installed.
 
+
 Once you have node and npm installed, clone this repository and run `npm start` in the terminal.
