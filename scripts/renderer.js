@@ -19,8 +19,9 @@ function dataReturner(mode){
             storage.get('videosettings', (error, dat)=>{
                 if(error) throw error;
                 data = dat;
+                console.log(dat); //returns desired output but still contains __proto__ object.
             });
-            console.log(data);
+            console.log(data); //returns __proto__ object... Why tho?
             return data;
     }
 }

@@ -19,10 +19,10 @@ function createWindow(settings){
     });
     win.loadFile('index.html');
 }
-function resolutionSettings(){
+function resolutionSettings(){ //starts the windowInit function which opens the window with height and width of what ever was set previously, if nothing was set use 800 x 600 as default resolution
     console.log(defaultDataPath);
     storage.setDataPath(defaultDataPath);
-    storage.has('videosettings', (error, hasKey) =>{
+    storage.has('videosettings', (error, hasKey) => {
         if(error) throw error;
         switch(hasKey){
             case false: 
@@ -36,7 +36,7 @@ function resolutionSettings(){
 }
 function makeSettingsFile(){
     storage.setDataPath(defaultDataPath);
-    storage.set('videosettings', defaultvideosettings, (error)=>{
+    storage.set('videosettings', defaultvideosettings, (error) => {
         if(error) throw error;
     });
 }
