@@ -1,5 +1,5 @@
 {
-  "name": "tetrectron",
+  "name": "electris",
   "version": "1.0.0",
   "description": "Tetris clone using Phaser and Electron",
   "main": "main.js",

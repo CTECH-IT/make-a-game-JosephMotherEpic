@@ -12,7 +12,7 @@ function makeCells() {
 
 }
 function choseBlock(){
-    
+     
 }
 //function dataReturner(mode) {
 //    storage.setDataPath(dataPath);
@@ -41,30 +41,15 @@ function choseBlock(){
 //}
 //let settings = dataReturner('video');
 //console.log(settings);
-let config = { //phaser configuration
-    type: Phaser.AUTO,
+
+var config = {
     width: 800,
     height: 600,
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    }
-};
-
-let game = new Phaser.Game(config);
-
-function preload() {
-
+    backgroundColor: 0x000000,
+    scene:[TitleScene,GameScene]
 }
+var game = new Phaser.Game(config);
 
-function create() {
-
-}
-
-function update() {
-
-}
 
 
 

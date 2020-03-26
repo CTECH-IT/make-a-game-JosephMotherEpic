@@ -4,7 +4,7 @@ const defaultDataPath = storage.getDefaultDataPath();
 const defaultvideosettings = {
     width: 800,
     height: 600,
-    windowborder: true
+    windowborder: false
 };
 
 function createWindow(settings){
