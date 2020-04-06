@@ -3,12 +3,15 @@ class TitleScene extends Phaser.Scene{
         super("bootGame");
     }
     init(){
-
+        
     }
-
+    preload(){
+        this.load.spritesheet('button','sprites/playButton.png',{frameWidth:200,frameHeight:75});
+    }
     create(){
-        this.add.text(400,200,"Electris",{font: "25px Arial",fill:"white"});
-        this.add.rectangle(400,300,170,85,0xffff00,1);
+        this.add.sprite(400,300,'button')
+    }
+    update(){
 
     }
 }
