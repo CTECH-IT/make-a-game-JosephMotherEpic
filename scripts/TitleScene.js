@@ -9,7 +9,7 @@ class TitleScene extends Phaser.Scene{
         this.load.spritesheet('button','sprites/playButton.png',{frameWidth:200,frameHeight:75});
     }
     create(){
-        this.add.sprite(400,300,'button')
+        this.add.sprite(400,300,'button');
     }
     update(){
 
