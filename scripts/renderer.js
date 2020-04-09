@@ -11,6 +11,7 @@
 function makeCells() {
 
 }
+
 function choseBlock(){
      
 }
@@ -48,6 +49,7 @@ var config = {
     backgroundColor: 0x000000,
     scene:[TitleScene,GameScene]
 }
+
 var game = new Phaser.Game(config);
 
 
